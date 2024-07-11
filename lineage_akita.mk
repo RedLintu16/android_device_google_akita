@@ -14,6 +14,29 @@ $(call inherit-product, device/google/zuma/lineage_common.mk)
 
 include device/google/akita/akita/device-lineage.mk
 
+
+#RisingTechOSS Stuff
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RISING_CHIPSET="Google Tensor 3" \
+    RISING_MAINTAINER="RedLintu16"
+
+#GMS Stuff
+WITH_GMS := true
+TARGET_CORE_GMS := true
+
+#GMS Addons
+PRODUCT_PACKAGES += \
+	Photos \
+	MarkupGoogle \
+	LatinIMEGooglePrebuilt \
+	AiWallpapers \
+	WallpaperEmojiPrebuilt \
+	PrebuiltDeskClockGoogle \
+	CalculatorGooglePrebuilt \
+	CalendarGooglePrebuilt \
+	Velvet
+
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 8a
